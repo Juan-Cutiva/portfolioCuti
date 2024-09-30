@@ -1,8 +1,24 @@
 ---
-import Moon from "../components/Moon.astro";
+import Moon from '../components/Moon.astro';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { languages } from '../i18n/ui';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<header class="w-screen h-14 bg-white">
-    <Moon/>
+<header class="h-14 w-screen bg-white flex">
+	<Moon />
+	<a href={getRelativeLocaleUrl(lang, 'about')}> {t('nav.home')}</a>
+	<ul>
+		{
+			Object.entries(languages).map(([lang, label]) => (
+				<li>
+					<a href={`/${lang}/`}>{label}</a>
+				</li>
+			))
+		}
+	</ul>
 </header>
 <script src="../scripts/inputTheme.js"></script>
