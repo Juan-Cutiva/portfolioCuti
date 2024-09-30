@@ -9,17 +9,16 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="light">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="PortFolio Juan Cutiva Donde podrás conocer de mi." />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="robots" content="LayoutPage, follow">
-		<meta name="generator" content={Astro.generator} />
+		<meta name="robots" content="LayoutPage, follow" />
 		<title>{title}</title>
 	</head>
-	<body class="bg-[#13151a] font-Rubik">
+	<body class="font-Rubik bg-[#13151a]">
 		<slot />
 	</body>
 </html>
