@@ -13,13 +13,21 @@ document.addEventListener('DOMContentLoaded', () => {
 		root.setAttribute('class', setTheme);
 	}
 });
-
 document.addEventListener('change', () => {
-	const Switch = document.querySelector('#theme-switch__checkbox');
-	const root = document.documentElement;
-	if (root.getAttribute('class') === 'light') {
-		Switch.checked = false;
-	} else if (root.getAttribute('class') === 'dark') {
-		Switch.checked = true;
+	const themeSwitch = document.querySelector('#theme-switch__checkbox');
+	if (themeSwitch.checked === true) {
+		window.localStorage.theme = 'dark';
+	} else if (themeSwitch.checked === false) {
+		window.localStorage.theme = 'light';
+	}
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+	var theme = window.localStorage.theme;
+	const themeSwitch = document.querySelector('#theme-switch__checkbox');
+	if (theme === 'dark') {
+		themeSwitch.checked = true;
+	} else if (theme === 'light') {
+		themeSwitch.checked = false;
 	}
 });
