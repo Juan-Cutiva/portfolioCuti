@@ -6,10 +6,13 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import { getLangFromUrl } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <!doctype html>
-<html lang="es" class="">
+<html lang={lang} class="">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="PortFolio Juan Cutiva Donde podrás conocer de mi." />
