@@ -12,7 +12,7 @@ export default {
 			},
 			colors: {
 				White: '#fafafa',
-				Black: '#111827',
+				Black: '#2f074d',
 			}
 		}
 	},
