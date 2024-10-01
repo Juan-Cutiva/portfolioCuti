@@ -1,6 +1,7 @@
 ---
 // @ts-nocheck
 import Dev from '../../public/icons/dev.astro';
+import Menu from '../../public/icons/Menu.astro';
 import Moon from '../components/Moon.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { getRelativeLocaleUrl } from 'astro:i18n';
@@ -18,6 +19,9 @@ const t = useTranslations(lang);
 
 <header class="flex h-14 w-screen justify-end bg-White text-Black dark:bg-Black dark:text-White">
 	<nav class="flex items-center">
+		<div class="flex md:hidden">
+			<Menu />
+		</div>
 		<a
 			href={getRelativeLocaleUrl(lang, '/')}
 			class="absolute left-10 flex items-center text-xl font-semibold"
@@ -39,5 +43,30 @@ const t = useTranslations(lang);
 			<Moon />
 		</div>
 	</nav>
+	<div id="header" class="absolute top-14 hidden h-44 w-screen bg-White dark:bg-Black"></div>
 </header>
+<style>
+	#header {
+		--tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.1);
+		--tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
+		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
+			var(--tw-shadow);
+	}
+	@keyframes fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@keyframes fade-out {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+</style>
 <script src="../scripts/inputTheme.js"></script>

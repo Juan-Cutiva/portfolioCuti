@@ -31,3 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
 		themeSwitch.checked = false;
 	}
 });
+
+
+/* Header change for mobile */
+/*const button = document.getElementById('burger');
+const header = document.getElementById('header');
+const navItems = document.getElementById('navItems')
+
+button.addEventListener('click', activate);
+
+function activate() {
+	if (button.classList.toggle('active') === true) {
+		header.style.display = 'flex';
+		navItems.style.display = 'flex';
+        header.style.animation='fade-in .5s forwards'
+	} else {
+		navItems.style.display = 'none';
+        header.style.animation='fade-out .5s forwards'
+	}
+}*/
