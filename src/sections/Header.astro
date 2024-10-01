@@ -32,7 +32,7 @@ const t = useTranslations(lang);
 				text.map((item) => (
 					<a
 						href={getRelativeLocaleUrl(lang, item.rute)}
-						class="m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out hover:bg-Black hover:text-White dark:hover:bg-White dark:hover:text-Black hidden md:flex"
+						class="m-1 hidden w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out hover:bg-Black hover:text-White md:flex dark:hover:bg-White dark:hover:text-Black"
 					>
 						<p class="text-center">{t(item.text)}</p>
 					</a>
@@ -43,7 +43,22 @@ const t = useTranslations(lang);
 			<Moon />
 		</div>
 	</nav>
-	<div id="header" class="absolute top-14 hidden h-44 w-screen bg-White dark:bg-Black"></div>
+	<!-- header mobile  -->
+	<div id="headerMobile" class="absolute top-14 hidden h-48 w-screen bg-White dark:bg-Black items-center justify-end">
+		<div class="flex-col w-auto hidden mr-8" id="navMobile">
+			{
+				text.map((item) => (
+					<a	
+						href={getRelativeLocaleUrl(lang, item.rute)}
+						class="m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out hover:bg-Black hover:text-White md:flex dark:hover:bg-White dark:hover:text-Black"
+					>
+						<p class="text-center">{t(item.text)}</p>
+					</a>
+				))
+			}
+		</div>
+	</div>
+	<!-- header mobile  -->
 </header>
 <style>
 	#header {

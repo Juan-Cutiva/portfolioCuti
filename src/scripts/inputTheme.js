@@ -34,9 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* Header change for mobile */
-/*const button = document.getElementById('burger');
-const header = document.getElementById('header');
-const navItems = document.getElementById('navItems')
+const button = document.getElementById('burger');
+const header = document.getElementById('headerMobile');
+const navItems = document.getElementById('navMobile')
 
 button.addEventListener('click', activate);
 
@@ -48,5 +48,8 @@ function activate() {
 	} else {
 		navItems.style.display = 'none';
         header.style.animation='fade-out .5s forwards'
+		setTimeout(()=>{
+			header.style.display= 'none'
+		},550)
 	}
-}*/
+}
