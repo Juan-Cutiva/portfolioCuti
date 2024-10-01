@@ -1,45 +1,39 @@
 ---
+// @ts-nocheck
 import Dev from '../../public/icons/dev.astro';
 import Moon from '../components/Moon.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
+const text = [
+	{ rute: '/', text: 'nav.home' },
+	{ rute: '#projects', text: 'nav.projects' },
+	{ rute: '#about', text: 'nav.about' },
+	{ rute: '#contact', text: 'nav.contact' }
+];
+
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<header class="bg-White text-Black dark:bg-Black dark:text-White flex h-14 w-screen justify-end">
+<header class="flex h-14 w-screen justify-end bg-White text-Black dark:bg-Black dark:text-White">
 	<nav class="flex items-center">
 		<a
 			href={getRelativeLocaleUrl(lang, '/')}
 			class="absolute left-10 flex items-center text-xl font-semibold"
 			>Juan Cutiva <span class="mt-[3px] pl-1"><Dev /></span></a
 		>
-		<div>
-			<a
-				href={getRelativeLocaleUrl(lang, '/')}
-				class="hover:bg-Black hover:text-White dark:hover:bg-White dark:hover:text-Black m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out"
-			>
-				{t('nav.home')}</a
-			>
-			<a
-				href={getRelativeLocaleUrl(lang, 'about')}
-				class="hover:bg-Black hover:text-White dark:hover:bg-White dark:hover:text-Black m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out"
-			>
-				{t('nav.projects')}</a
-			>
-			<a
-				href={getRelativeLocaleUrl(lang, 'about')}
-				class="hover:bg-Black hover:text-White dark:hover:bg-White dark:hover:text-Black m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out"
-			>
-				{t('nav.about')}</a
-			>
-			<a
-				href={getRelativeLocaleUrl(lang, 'about')}
-				class="hover:bg-Black hover:text-White dark:hover:bg-White dark:hover:text-Black m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out"
-			>
-				{t('nav.contact')}</a
-			>
+		<div class="flex w-auto">
+			{
+				text.map((item) => (
+					<a
+						href={getRelativeLocaleUrl(lang, item.rute)}
+						class="m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out hover:bg-Black hover:text-White dark:hover:bg-White dark:hover:text-Black hidden md:flex"
+					>
+						<p class="text-center">{t(item.text)}</p>
+					</a>
+				))
+			}
 		</div>
 		<div class="scale-50">
 			<Moon />
