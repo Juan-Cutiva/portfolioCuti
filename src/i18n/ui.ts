@@ -10,12 +10,14 @@ export const ui = {
 		'nav.home': 'Inicio',
 		'nav.projects': 'Proyectos',
 		'nav.contact': 'Contacto',
-		'nav.about': 'Sobre Mí'
+		'nav.about': 'Sobre Mí',
+		'typed.text': 'Un desarrollador el cual quiere descubrir sus limites',
 	},
 	en: {
 		'nav.home': 'Home',
 		'nav.projects': 'Projects',
 		'nav.contact': 'Contact',
-		'nav.about': 'About'
+		'nav.about': 'About',
+		'typed.text': 'A developer who wants to discover his limits',
 	}
 } as const;
