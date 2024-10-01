@@ -7,9 +7,13 @@ export default {
 			screens: {
 				xs: '430px'
 			},
-			fontFamily:{
-				Rubik : ['Rubik Variable', 'sans-serif']
-				},
+			fontFamily: {
+				Rubik: ['Rubik Variable', 'sans-serif']
+			},
+			colors: {
+				White: '#fafafa',
+				Black: '#111827',
+			}
 		}
 	},
 	plugins: []

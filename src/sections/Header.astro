@@ -1,24 +1,49 @@
 ---
+import Dev from '../../public/icons/dev.astro';
 import Moon from '../components/Moon.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import { languages } from '../i18n/ui';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<header class="h-14 w-screen bg-white flex">
-	<Moon />
-	<a href={getRelativeLocaleUrl(lang, 'about')}> {t('nav.home')}</a>
-	<ul>
-		{
-			Object.entries(languages).map(([lang, label]) => (
-				<li>
-					<a href={`/${lang}/`}>{label}</a>
-				</li>
-			))
-		}
-	</ul>
+<header class="bg-White text-Black dark:bg-Black dark:text-White flex h-14 w-screen justify-end">
+	<nav class="flex items-center">
+		<a
+			href={getRelativeLocaleUrl(lang, '/')}
+			class="absolute left-10 flex items-center text-xl font-semibold"
+			>Juan Cutiva <span class="mt-[3px] pl-1"><Dev /></span></a
+		>
+		<div>
+			<a
+				href={getRelativeLocaleUrl(lang, '/')}
+				class="hover:bg-Black hover:text-White dark:hover:bg-White dark:hover:text-Black m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out"
+			>
+				{t('nav.home')}</a
+			>
+			<a
+				href={getRelativeLocaleUrl(lang, 'about')}
+				class="hover:bg-Black hover:text-White dark:hover:bg-White dark:hover:text-Black m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out"
+			>
+				{t('nav.projects')}</a
+			>
+			<a
+				href={getRelativeLocaleUrl(lang, 'about')}
+				class="hover:bg-Black hover:text-White dark:hover:bg-White dark:hover:text-Black m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out"
+			>
+				{t('nav.about')}</a
+			>
+			<a
+				href={getRelativeLocaleUrl(lang, 'about')}
+				class="hover:bg-Black hover:text-White dark:hover:bg-White dark:hover:text-Black m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out"
+			>
+				{t('nav.contact')}</a
+			>
+		</div>
+		<div class="scale-50">
+			<Moon />
+		</div>
+	</nav>
 </header>
 <script src="../scripts/inputTheme.js"></script>
