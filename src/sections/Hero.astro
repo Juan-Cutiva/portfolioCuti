@@ -3,16 +3,21 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import '../css/bg.css';
 import Download from '../../public/icons/download.astro';
 import HeroType from '../components/hero';
+import Linkedin from '../icons/linkedin.astro';
+import Github from '../icons/github.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="flex justify-between">
-	<h1 class="text-8xl text-neutral-100">{t('nav.home')}</h1>
+<section class="mx-auto flex w-[75vw] justify-between">
 	<div class="flex">
-		<img src="/cutiImg.png" alt="Cuti Image" class="absolute ml-20 mt-4 w-96 rounded-[100px]" />
-		<img src="/BIGGLOW.png" alt="Circle Image" class="h-[32em]" />
+		<img
+			src="/cutiImg.png"
+			alt="Cuti Image"
+			class="absolute ml-[4.5rem] mt-3 w-[26rem] rounded-[100px]"
+		/>
+		<img src="/BIGGLOW.png" alt="Circle Image" class="h-[34em]" />
 		<a
 			class="absolute top-80 flex size-40 items-center justify-center"
 			download="JuanDavidCutivaCV.pdf"
@@ -26,7 +31,13 @@ const t = useTranslations(lang);
 				<p class="inline-flex items-center justify-center pb-px text-2xl"><Download />CV</p>
 			</div>
 		</a>
+		<div class="absolute right-[24rem] top-72">
+			<HeroType lang={lang} client:load />
+			<div class="absolute top-0 -left-14">
+				<a href="https://www.linkedin.com/in/juan-david-cutiva-lopez-62ba62253/" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
+				<a href="https://github.com/Juan-Cutiva" target="_blank" rel="noopener noreferrer"><Github/></a>
+			</div>
+		</div>
 	</div>
-	<HeroType lang={lang} client:load />
 </section>
 <div id="bg" class="bg-[#5b2c80] dark:bg-[#220b35]"></div>

@@ -11,13 +11,13 @@ export const ui = {
 		'nav.projects': 'Proyectos',
 		'nav.contact': 'Contacto',
 		'nav.about': 'Sobre Mí',
-		'typed.text': 'Un desarrollador el cual quiere descubrir sus limites',
+		'typed.text': 'Un desarrollador Front-End el cual quiere descubrir sus limites',
 	},
 	en: {
 		'nav.home': 'Home',
 		'nav.projects': 'Projects',
 		'nav.contact': 'Contact',
 		'nav.about': 'About',
-		'typed.text': 'A developer who wants to discover his limits',
+		'typed.text': 'A developer Front-End who wants to discover his limits',
 	}
 } as const;

@@ -49,7 +49,7 @@ function activate() {
 		header.style.animation = 'fade-out .5s forwards';
 		setTimeout(() => {
 			header.style.display = 'none';
-		}, 550);
+		}, 300);
 	}
 }
 window.addEventListener('resize', () => {

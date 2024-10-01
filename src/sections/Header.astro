@@ -1,7 +1,7 @@
 ---
 // @ts-nocheck
 import Dev from '../../public/icons/dev.astro';
-import Menu from '../../public/icons/Menu.astro';
+import Menu from '../icons/Menu.astro';
 import Moon from '../components/Moon.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { getRelativeLocaleUrl } from 'astro:i18n';
@@ -25,7 +25,9 @@ const t = useTranslations(lang);
 		<a
 			href={getRelativeLocaleUrl(lang, '/')}
 			class="absolute left-10 flex items-center text-xl font-semibold"
-			>Juan Cutiva <span class="mt-[3px] pl-1"><Dev /></span></a
+			><span class="mb-px text-yellow-400 dark:text-yellow-500">Juan</span><span
+				class="text-transparent">-</span
+			> Cutiva <span class="mt-[3px] pl-1"><Dev /></span></a
 		>
 		<div class="flex w-auto">
 			{
@@ -39,7 +41,7 @@ const t = useTranslations(lang);
 				))
 			}
 		</div>
-		<div class="scale-50 relative md:static top-14 left-4" id="buttonMoon">
+		<div class="relative left-4 top-14 scale-50 md:static" id="buttonMoon">
 			<Moon />
 		</div>
 	</nav>
