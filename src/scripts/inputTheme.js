@@ -52,10 +52,9 @@ function activate() {
 		}, 550);
 	}
 }
-window.addEventListener('click', () => {
+window.addEventListener('resize', () => {
 	if (window.innerWidth >= 764) {
 		navItems.style.display = 'none';
 		header.style.display = 'none';
-		console.log(window.innerWidth + 'Es mayor');
 	}
 });
