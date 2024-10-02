@@ -1,8 +1,6 @@
 const button = document.querySelector('.radio-input');
 const buttonEn = button.querySelector('#en');
 const buttonEs = button.querySelector('#es');
-console.log(buttonEn);
-console.log(buttonEs);
 
 const lang = document.querySelector('html').lang;
 
