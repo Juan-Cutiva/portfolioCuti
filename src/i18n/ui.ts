@@ -17,7 +17,7 @@ export const ui = {
 		'nav.home': 'Home',
 		'nav.projects': 'Projects',
 		'nav.contact': 'Contact',
-		'nav.about': 'About',
+		'nav.about': 'About Me',
 		'typed.text': 'A developer Front-End who wants to discover his limits'
 	}
 } as const;

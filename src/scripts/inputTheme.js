@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* Header change for mobile */
+/* corregir bug del button burger, no refresca su estado cuando se hace resize */
 const button = document.getElementById('burger');
 const header = document.getElementById('headerMobile');
 const navItems = document.getElementById('navMobile');

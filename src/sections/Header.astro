@@ -8,8 +8,8 @@ import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const text = [
 	{ rute: '/', text: 'nav.home' },
-	{ rute: '#projects', text: 'nav.projects' },
 	{ rute: '#about', text: 'nav.about' },
+	{ rute: '#projects', text: 'nav.projects' },
 	{ rute: '#contact', text: 'nav.contact' }
 ];
 
@@ -17,7 +17,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<header class="flex h-14 w-screen justify-end bg-White text-Black dark:bg-Black dark:text-White">
+<header class="flex h-14 w-screen justify-end bg-White text-Black dark:bg-Black dark:text-White shadow-lg fixed top-0 z-40">
 	<nav class="flex items-center">
 		<div class="absolute right-10 flex md:hidden">
 			<Menu />
@@ -66,8 +66,8 @@ const t = useTranslations(lang);
 	<!-- header mobile  -->
 </header>
 <style>
-	#header {
-		--tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.1);
+	#headerMobile {
+		--tw-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.2);
 		--tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
 		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
 			var(--tw-shadow);
