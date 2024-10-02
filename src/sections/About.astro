@@ -1,0 +1,19 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<!-- {t(item.text)} -->
+<section
+	id="about"
+	class="mx-auto mt-20 flex w-[85vw] flex-col items-center justify-center gap-20  md:w-[70vw] md:flex-row p-8 rounded-2xl backdrop-blur-md"
+>
+	<img src="/cutiGaia.webp" alt="Image Cuti and Gaia" class="w-[15rem] rounded-2xl" />
+	<div class="prose prose-h2:text-yellow-400 dark:prose-h2:text-yellow-500 text-White">
+		<h2 class="text-center">{t('about.title')}</h2>
+		<p class="text-center">
+			{t('about.text')}<span class="text-2xl text-yellow-400 dark:text-yellow-500">.</span>
+		</p>
+	</div>
+</section>

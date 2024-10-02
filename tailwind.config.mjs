@@ -12,9 +12,9 @@ export default {
 			},
 			colors: {
 				White: '#fafafa',
-				Black: '#2f074d',
+				Black: '#2f074d'
 			}
 		}
 	},
-	plugins: []
+	plugins: [require('@tailwindcss/typography')]
 };

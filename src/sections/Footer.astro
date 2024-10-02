@@ -1,8 +1,9 @@
 ---
 import { languages } from '../i18n/ui';
+import Test from './Test.astro';
 ---
 
-<footer class="mx-auto w-[75vw]">
+<footer class="mx-auto w-[70vw]">
 	<ul>
 		{
 			Object.entries(languages).map(([lang, label]) => (
@@ -12,4 +13,6 @@ import { languages } from '../i18n/ui';
 			))
 		}
 	</ul>
+
+	<Test/>
 </footer>
