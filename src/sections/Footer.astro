@@ -1,18 +1,9 @@
 ---
-import { languages } from '../i18n/ui';
-import Test from './Test.astro';
+import LangButton from '../components/LangButton.astro';
 ---
 
 <footer class="mx-auto w-[70vw]">
-	<ul>
-		{
-			Object.entries(languages).map(([lang, label]) => (
-				<li>
-					<a href={`/${lang}/`}>{label}</a>
-				</li>
-			))
-		}
-	</ul>
-
-	<Test/>
+	<div class="mb-80">
+		<LangButton/>
+	</div>
 </footer>
