@@ -7,8 +7,8 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const text = [
-	{ rute: '/', text: 'nav.home' },
-	{ rute: '#about', text: 'nav.about' },
+	{ rute: '#home', text: 'nav.home' },
+	{ rute: '#aboutMe', text: 'nav.about' },
 	{ rute: '#projects', text: 'nav.projects' },
 	{ rute: '#contact', text: 'nav.contact' }
 ];
@@ -17,7 +17,9 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<header class="flex h-14 w-screen justify-end bg-White text-Black dark:bg-Black dark:text-White shadow-lg fixed top-0 z-40">
+<header
+	class="fixed top-0 z-40 flex h-14 w-screen justify-end bg-White text-Black shadow-lg dark:bg-Black dark:text-White"
+>
 	<nav class="flex items-center">
 		<div class="absolute right-10 flex md:hidden">
 			<Menu />
@@ -33,7 +35,7 @@ const t = useTranslations(lang);
 			{
 				text.map((item) => (
 					<a
-						href={getRelativeLocaleUrl(lang, item.rute)}
+						href={item.rute}
 						class="m-1 hidden w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out hover:bg-Black hover:text-White md:flex dark:hover:bg-White dark:hover:text-Black"
 					>
 						<p class="text-center">{t(item.text)}</p>
