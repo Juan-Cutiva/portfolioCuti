@@ -56,7 +56,7 @@ const t = useTranslations(lang);
 			{
 				text.map((item) => (
 					<a
-						href={getRelativeLocaleUrl(lang, item.rute)}
+						href={item.rute}
 						class="m-1 w-auto rounded-xl px-3 py-1 font-medium transition-all duration-[250ms] ease-out hover:bg-Black hover:text-White md:flex dark:hover:bg-White dark:hover:text-Black"
 					>
 						<p class="text-center">{t(item.text)}</p>
