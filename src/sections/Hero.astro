@@ -1,7 +1,7 @@
 ---
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import '../css/bg.css';
-import Download from '../../public/icons/download.astro';
+import Download from '../icons/download.astro';
 import HeroType from '../components/hero';
 import Linkedin from '../icons/linkedin.astro';
 import Github from '../icons/github.astro';
@@ -10,34 +10,101 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="mx-auto flex w-[75vw] justify-between">
-	<div class="flex">
-		<img
-			src="/cutiImg.png"
-			alt="Cuti Image"
-			class="absolute ml-[4.5rem] mt-3 w-[26rem] rounded-[100px]"
-		/>
-		<img src="/BIGGLOW.png" alt="Circle Image" class="h-[34em]" />
+<section id="parent">
+	<div id="div1" class="flex size-full items-center justify-center">
 		<a
-			class="absolute top-80 flex size-40 items-center justify-center"
+			href="https://www.linkedin.com/in/juan-david-cutiva-lopez-62ba62253/"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="relative scale-110"><Linkedin /></a
+		>
+	</div>
+
+	<div id="div2" class="flex size-full items-center justify-center">
+		<a
+			href="https://github.com/Juan-Cutiva"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="relative scale-110"><Github /></a
+		>
+	</div>
+
+	<div id="div3">
+		<img src="/cutiImgGroup.png" alt="Cuti Image" class="w-[auto] max-w-[38rem] rounded-[100px]" />
+	</div>
+
+	<div id="div4">
+		<div class="">
+			<HeroType lang={lang} client:load />
+		</div>
+	</div>
+	<div id="div5" class="flex size-full items-center justify-around">
+		<a
+			class="flex items-center justify-center"
 			download="JuanDavidCutivaCV.pdf"
 			href="/JuanDavidCutivaCV.pdf"
 		>
-			<div class="absolute size-28 rounded-full bg-pink-400 opacity-40"></div>
-			<div class="absolute size-24 rounded-full bg-pink-700 opacity-70"></div>
+			<div class="absolute size-32 rounded-full bg-pink-400 opacity-40"></div>
+			<div class="absolute size-28 rounded-full bg-pink-700 opacity-70"></div>
 			<div
-				class="absolute flex size-20 place-content-center rounded-full bg-pink-900 bg-opacity-100 text-Black dark:text-White"
+				class="absolute flex size-24 place-content-center rounded-full bg-pink-900 bg-opacity-100 text-Black dark:text-White"
 			>
 				<p class="inline-flex items-center justify-center pb-px text-2xl"><Download />CV</p>
 			</div>
 		</a>
-		<div class="absolute right-[24rem] top-72">
-			<HeroType lang={lang} client:load />
-			<div class="absolute top-0 -left-14">
-				<a href="https://www.linkedin.com/in/juan-david-cutiva-lopez-62ba62253/" target="_blank" rel="noopener noreferrer"><Linkedin /></a>
-				<a href="https://github.com/Juan-Cutiva" target="_blank" rel="noopener noreferrer"><Github/></a>
-			</div>
-		</div>
+		<p class="text-transparent">a</p>
 	</div>
 </section>
 <div id="bg" class="bg-[#5b2c80] dark:bg-[#220b35]"></div>
+
+<style>
+	#parent {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+
+	#div1 {
+		grid-area: 2 / 2 / 3 / 3;
+	}
+	#div2 {
+		grid-area: 3 / 2 / 4 / 3;
+	}
+	#div3 {
+		grid-area: 1 / 1 / 5 / 3;	
+	}
+	#div4 {
+		grid-area:2 / 3 / 4 / 5;
+	}
+	#div5 {
+		grid-area: 3 / 1 / 4 / 2;
+	}
+
+	@media (max-width: 768px) {
+		#parent {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: repeat(7, 1fr);
+			grid-column-gap: 0px;
+			grid-row-gap: 0px;
+		}
+
+		#div1 {
+			grid-area: 3 / 4 / 4 / 5;
+		}
+		#div2 {
+			grid-area: 4 / 4 / 5 / 5;
+		}
+		#div3 {
+			grid-area: 1 / 1 / 6 / 5;
+		}
+		#div4 {
+			grid-area: 4 / 1 / 5 / 2;
+		}
+		#div5 {
+			grid-area: 6 / 2 / 8 / 4;
+		}
+	}
+</style>
