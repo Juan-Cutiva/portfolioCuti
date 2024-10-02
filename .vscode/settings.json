@@ -5,6 +5,7 @@
         "fontsource",
         "keyframes",
         "nocheck",
-        "rubik"
+        "rubik",
+        "tailwindcss"
     ]
 }

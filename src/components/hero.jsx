@@ -25,7 +25,7 @@ export default function MyComponent(props) {
 	}, []);
 
 	return (
-		<div className="w-[23rem] font-bold text-White" id="typed">
+		<div className="w-[23rem] text-center font-bold text-White md:text-start" id="typed">
 			<span ref={el} />
 		</div>
 	);
