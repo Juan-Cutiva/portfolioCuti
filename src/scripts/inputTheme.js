@@ -1,5 +1,12 @@
 const themeSwitch = document.getElementById('theme-switch');
 const checkbox = document.getElementById('theme-switch__checkbox');
+const htmlTheme = document.querySelector('html');
+
+setTimeout(() => {
+	if (htmlTheme.classList.value == 'dark') {
+		checkbox.checked = true;
+	}
+}, 10);
 
 document.addEventListener('DOMContentLoaded', () => {
 	const themeSwitch = document.querySelector('#theme-switch__checkbox');

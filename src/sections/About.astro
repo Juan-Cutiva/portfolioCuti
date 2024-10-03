@@ -6,13 +6,20 @@ const t = useTranslations(lang);
 
 <section
 	id="aboutMeSection"
-	class="mx-auto mt-20 flex w-[85vw] flex-col items-center justify-center gap-20  md:w-[70vw] md:flex-row p-8 rounded-2xl backdrop-blur-md"
+	class="mx-auto mt-20 flex w-[85vw] flex-col items-center justify-center gap-20 rounded-2xl border-[4px] border-yellow-400 p-8 backdrop-blur-md md:w-[70vw] md:flex-row dark:border-yellow-500"
 >
 	<img src="/cutiGaia.webp" alt="Image Cuti and Gaia" class="w-[15rem] rounded-2xl" />
-	<div class="prose prose-h2:text-yellow-400 dark:prose-h2:text-yellow-500 text-White">
+	<div
+		class="prose prose-h2:text-yellow-400 dark:prose-h2:text-yellow-500 flex flex-col items-center text-White"
+	>
 		<h2 class="text-center text-4xl">{t('about.title')}</h2>
 		<p class="text-center">
 			{t('about.text')}<span class="text-2xl text-yellow-400 dark:text-yellow-500">.</span>
 		</p>
+		<a
+			href="#contact"
+			class="h-auto w-60 rounded-lg bg-Black px-4 py-2 text-center text-yellow-400 decoration-transparent shadow-lg transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:bg-yellow-500 hover:text-Black dark:text-yellow-500"
+			>Contact Me</a
+		>
 	</div>
 </section>
