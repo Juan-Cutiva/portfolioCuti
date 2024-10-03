@@ -1,0 +1,138 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const color = 'text-yellow-400 dark:text-yellow-500';
+const colorFull = 'text-yellow-400 dark:text-yellow-500 opacity-25';
+const stars = [
+	{
+		id: 1,
+		language: 'TailWindCSS',
+		classStarFull: color,
+		classStar: colorFull,
+		stars: 7,
+		color: '#38bdf8'
+	},
+	{
+		id: 2,
+		language: 'Astro',
+		classStarFull: color,
+		classStar: colorFull,
+		stars: 6,
+		color: '#f97316'
+	},
+	{
+		id: 3,
+		language: 'HTML',
+		languageTwo: 'CCS',
+		and: t('skills.and'),
+		classStarFull: color,
+		classStar: colorFull,
+		stars: 6,
+		color: '#e44d26',
+		colorTwo: '#254bdd'
+	},
+	{
+		id: 4,
+		language: 'JavaScript',
+		classStarFull: color,
+		classStar: colorFull,
+		stars: 5,
+		color: '#efd81d'
+	},
+	{
+		id: 5,
+		language: 'React JS',
+		classStarFull: color,
+		classStar: colorFull,
+		stars: 3,
+		color: '#58c4dc'
+	},
+	{
+		id: 6,
+		language: 'Git',
+		languageTwo: 'GitHub',
+		and: t('skills.and'),
+		classStarFull: color,
+		classStar: colorFull,
+		stars: 5,
+		color: '#e84e31',
+		colorTwo: '#23262b'
+	}
+];
+---
+
+<section class="mx-auto mt-24 w-[85vw] md:w-[70vw]">
+	<h2
+		class="mb-8 w-full text-center text-5xl font-semibold text-yellow-400 sm:text-7xl dark:text-yellow-500"
+	>
+		{t('skills.title')}
+	</h2>
+	<div id="skills">
+		<div class="">
+			{
+				stars.map((item) => {
+					const circle = '  ●'; /* ★ */
+					var contentFull = circle.repeat(item.stars);
+					var content = circle.repeat(8 - item.stars);
+					const color =
+						item.color === '#f97316'
+							? 'text-[#f97316]'
+							: '' || item.color === '#38bdf8'
+								? 'text-[#38bdf8]'
+								: '' || item.color === '#e44d26'
+									? 'text-[#e44d26]'
+									: '' || item.color === '#efd81d'
+										? 'text-[#efd81d]'
+										: '' || item.color === '#58c4dc'
+											? 'text-[#58c4dc]'
+											: '' || item.color === '#e84e31'
+												? 'text-[#e84e31]'
+												: '';
+					const colorTwo =
+						item.colorTwo === '#254bdd'
+							? 'text-[#254bdd]'
+							: '' || item.colorTwo === '#23262b'
+								? 'text-[#23262b]'
+								: '';
+					return (
+						<div class="mx-auto mb-4 flex w-[90%] items-center justify-between md:w-[70%]">
+							<>
+								<div class="inline-flex">
+									<>
+										<p
+											class={`text-center text-xl font-semibold sm:text-2xl ${color} tracking-[0.035rem]`}
+											style={`filter: drop-shadow(0 0 1px ${item.color});`}
+										>
+											{item.language}
+										</p>
+										<span
+											class={`mx-2 text-center text-xl font-semibold tracking-[0.035rem] text-White sm:text-2xl`}
+											style={`filter: drop-shadow(0 0 1px #fafafa);`}
+										>
+											{item.and}
+										</span>
+										<span
+											class={`text-center text-xl font-semibold sm:text-2xl ${colorTwo} tracking-[0.035rem]`}
+											style={`filter: drop-shadow(0 0 1px ${item.colorTwo});`}
+										>
+											{item.languageTwo}
+										</span>
+									</>
+								</div>
+								<span
+									id={item.id.toString()}
+									class={`${item.classStarFull} pb-2 text-xl sm:text-2xl`}
+									style="filter: drop-shadow(0 0 1.5px #eab308);"
+								>
+									{contentFull} <span class={item.classStar}>{content}</span>
+								</span>
+							</>
+						</div>
+					);
+				})
+			}
+		</div>
+	</div>
+</section>

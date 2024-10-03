@@ -13,7 +13,7 @@ export default function MyComponent(props) {
 	React.useEffect(() => {
 		const typed = new Typed(el.current, {
 			strings: [
-				`<span class="text-6xl text-yellow-400 dark:text-yellow-500">Juan Cutiva</span> <span class="text-xl font-semibold">${t('typed.text')}</span><span class="text-xl font-semibold text-yellow-400 dark:text-yellow-500">.</span>`
+				`<span class="text-5xl lg:text-6xl text-yellow-400 dark:text-yellow-500">Juan Cutiva</span> <span class="text-xl font-semibold">${t('typed.text')}</span><span class="text-xl font-semibold text-yellow-400 dark:text-yellow-500">.</span>`
 			],
 			typeSpeed: 50
 		});
@@ -25,7 +25,10 @@ export default function MyComponent(props) {
 	}, []);
 
 	return (
-		<div className="w-[23rem] text-center font-bold text-White md:text-start" id="typed">
+		<div
+			className="w-[19rem] text-center font-bold text-White md:text-start lg:w-[23rem]"
+			id="typed"
+		>
 			<span ref={el} />
 		</div>
 	);

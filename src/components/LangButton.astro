@@ -1,67 +1,50 @@
 ---
 import { languages } from '../i18n/ui';
 ---
+
 <div class="radio-input">
-    {
-        Object.entries(languages).map(([lang, label]) => (
-            <label>
-                <input value={lang} name="value-radio" id={lang} type="radio"/>
-                <a href={`/${lang}/`} class="w-full h-10 flex justify-center items-center">{label}</a>
-            </label>
-        ))
-    }
-    <span class="selection"></span>
+	{
+		Object.entries(languages).map(([lang, label]) => (
+			<label>
+				<input value={lang} name="value-radio" id={lang} type="radio" />
+				<a href={`/${lang}/`} class="flex h-10 w-full items-center justify-center">
+					{label}
+				</a>
+			</label>
+		))
+	}
+	<span class="selection"></span>
 </div>
 <script src="../scripts/langButton.js"></script>
 
 <style>
 	.radio-input input {
-		display: none;
+		@apply hidden;
 	}
 
 	.radio-input {
 		--container_width: 200px;
-		position: relative;
-		display: flex;
-		align-items: center;
-		border-radius: 10px;
-		background-color: #fff;
-		color: #2f074d;
 		width: var(--container_width);
-		overflow: hidden;
-		border: 1px solid rgba(53, 52, 52, 0.226);
+		@apply relative flex items-center overflow-hidden rounded-[10px] border border-[#3534343a] bg-White text-Black;
 	}
 
 	.radio-input label {
-		width: 100%;
-		cursor: pointer;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		z-index: 1;
-		font-weight: 600;
 		letter-spacing: -1px;
-		font-size: 14px;
+		@apply z-[1] flex w-full cursor-pointer items-center justify-center text-sm font-semibold;
 	}
 
 	.selection {
-		display: none;
-		position: absolute;
-		height: 100%;
 		width: calc(var(--container_width) / 2);
-		z-index: 0;
-		left: 0;
-		top: 0;
 		transition: 0.15s ease;
+		@apply absolute left-0 top-0 z-0 hidden h-full;
 	}
 
 	.radio-input label:has(input:checked) {
-		color: #eab308;
+		@apply text-yellow-400 dark:text-yellow-500;
 	}
 
 	.radio-input label:has(input:checked) ~ .selection {
-		background-color: #2f074d;
-		display: inline-block;
+		@apply inline-block bg-Black;
 	}
 
 	.radio-input label:nth-child(1):has(input:checked) ~ .selection {

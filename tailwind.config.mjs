@@ -5,7 +5,7 @@ export default {
 	theme: {
 		extend: {
 			screens: {
-				xs: '430px'
+				xs: '550px'
 			},
 			fontFamily: {
 				Rubik: ['Rubik Variable', 'sans-serif']
