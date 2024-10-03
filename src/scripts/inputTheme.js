@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* Header change for mobile */
-/* corregir bug del button burger, no refresca su estado cuando se hace resize */
 const button = document.getElementById('burger');
 const header = document.getElementById('headerMobile');
 const navItems = document.getElementById('navMobile');
@@ -41,7 +40,7 @@ const navItems = document.getElementById('navMobile');
 button.addEventListener('click', activate);
 
 function activate() {
-	if (button.classList.toggle('active') === true) {
+	if (button.checked === true) {
 		header.style.display = 'flex';
 		navItems.style.display = 'flex';
 		header.style.animation = 'fade-in .5s forwards';
@@ -53,9 +52,20 @@ function activate() {
 		}, 300);
 	}
 }
+
+document.querySelector('section').addEventListener('click', () => {
+	navItems.style.display = 'none';
+	header.style.animation = 'fade-out .5s forwards';
+	setTimeout(() => {
+		header.style.display = 'none';
+	}, 300);
+	button.checked = false;
+});
+
 window.addEventListener('resize', () => {
 	if (window.innerWidth >= 764) {
 		navItems.style.display = 'none';
 		header.style.display = 'none';
+		button.checked = false;
 	}
 });

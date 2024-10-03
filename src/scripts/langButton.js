@@ -11,11 +11,3 @@ document.addEventListener('DOMContentLoaded', () => {
 		buttonEn.checked = 'true';
 	}
 });
-document.addEventListener('change', () => {
-	if (buttonEs.checked) {
-		console.log('button es prendido');
-        
-	} else if (buttonEn.checked) {
-		console.log('button en prendido');
-	}
-});
