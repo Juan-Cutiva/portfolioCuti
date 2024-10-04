@@ -1,0 +1,99 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const projects = [
+	{
+		id: 1,
+		name: 'F1 News',
+		img: 'https://i.postimg.cc/Njmf3rCg/f1.webp',
+		pImg: 'one',
+		pText: 'two',
+		description: t('projects.f1News')
+	},
+	{
+		id: 2,
+		name: 'Platzi Travel',
+		img: 'https://i.postimg.cc/rpTFMF75/travel.webp',
+		pImg: 'two',
+		pText: 'one',
+		description: t('projects.platziTravel')
+	},
+	{
+		id: 3,
+		name: 'Yard Sale',
+		img: 'https://i.postimg.cc/gJSYVyjK/yard.webp',
+		pImg: 'one',
+		pText: 'two',
+		description: t('projects.platziTravel')
+	},
+	{
+		id: 4,
+		name: 'Platzi Food',
+		img: 'https://i.postimg.cc/Gpj32n1V/food.webp',
+		pImg: 'two',
+		pText: 'one',
+		description: t('projects.platziTravel')
+	}
+];
+---
+
+<section class="mx-auto mt-24 w-[85vw] gap-6 md:w-[70vw] xl:gap-8" id="projectsSection">
+	{
+		projects.map((item) => {
+			return (
+				<div class="parent" id={item.name}>
+					<>
+						<div class="flex w-full flex-col items-center justify-center rounded-xl" id={item.pImg}>
+							<img src={item.img} alt="img" class="w-full rounded-lg" />
+						</div>
+						<div
+							class="prose-md h-fit w-full rounded-lg bg-[#ffffff17] p-8 text-center font-medium backdrop-blur-md xl:h-[16.5rem]"
+							id={item.pText}
+						>
+							<h2 class="mb-2 text-center text-4xl font-semibold text-yellow-400 dark:text-yellow-500">
+								{item.name}
+							</h2>
+							<p>{item.description}</p>
+						</div>
+					</>
+				</div>
+			);
+		})
+	}
+</section>
+
+<style>
+	.parent {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr auto;
+		grid-column-gap: 0px;
+		grid-row-gap: 32px;
+        margin-bottom: 2rem;
+	}
+
+	#one {
+		grid-area: 1 / 1 / 2 / 2;
+	}
+	#two {
+		grid-area: 2 / 1 / 3 / 2;
+	}
+	@media (min-width: 1280px) {
+		.parent {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 1fr;
+			grid-column-gap: 32px;
+			grid-row-gap: 0px;
+		}
+
+		#one {
+			grid-area: 1 / 1 / 2 / 2;
+		}
+		#two {
+			grid-area: 1 / 2 / 2 / 3;
+		}
+	}
+</style>

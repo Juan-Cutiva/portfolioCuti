@@ -60,7 +60,7 @@ function activate() {
 	}
 }
 
-document.querySelector('section').addEventListener('click', () => {
+document.querySelector('main').addEventListener('click', () => {
 	navItems.style.display = 'none';
 	header.style.animation = 'fade-out .5s forwards';
 	setTimeout(() => {

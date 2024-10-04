@@ -1,4 +1,5 @@
 ---
+//@ts-nocheck
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -11,7 +12,7 @@ const stars = [
 		language: 'TailWindCSS',
 		classStarFull: color,
 		classStar: colorFull,
-		stars: 7,
+		stars: 6,
 		color: '#38bdf8'
 	},
 	{
@@ -19,7 +20,7 @@ const stars = [
 		language: 'Astro',
 		classStarFull: color,
 		classStar: colorFull,
-		stars: 6,
+		stars: 5,
 		color: '#f97316'
 	},
 	{
@@ -38,7 +39,7 @@ const stars = [
 		language: 'JavaScript',
 		classStarFull: color,
 		classStar: colorFull,
-		stars: 5,
+		stars: 4,
 		color: '#efd81d'
 	},
 	{
