@@ -76,7 +76,7 @@ export default function project() {
 										href={item.live}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="mb-4 flex h-8 w-14 items-center justify-center rounded-lg border-[2px] border-yellow-400 bg-Black font-semibold text-yellow-400 transition-all duration-300 ease-out hover:scale-105 hover:bg-yellow-400 hover:text-Black xs:mb-6 xs:h-10 xs:w-20 sm:mb-8 dark:border-yellow-500 dark:text-yellow-500 dark:hover:bg-yellow-500"
+										className="mb-4 flex h-8 w-14 items-center justify-center rounded-lg border-[2px] border-yellow-400 bg-Black font-semibold text-yellow-400 transition-all duration-300 ease-out hover:scale-105 hover:bg-yellow-400 hover:text-Black xs:mb-6 xs:h-10 xs:w-20 sm:mb-8 dark:border-yellow-500 dark:text-yellow-500 dark:hover:bg-yellow-500 text-xs xs:text-base"
 									>
 										{t('projects.live')}
 									</a>
@@ -84,7 +84,7 @@ export default function project() {
 										href={item.repo}
 										target="_blank"
 										rel="noopener noreferrer"
-										className="mb-4 flex h-8 w-14 items-center justify-center rounded-lg border-[2px] border-yellow-400 bg-Black font-semibold text-yellow-400 transition-all duration-300 ease-out hover:scale-105 hover:bg-yellow-400 hover:text-Black xs:mb-6 xs:h-10 xs:w-20 sm:mb-8 dark:border-yellow-500 dark:text-yellow-500 dark:hover:bg-yellow-500"
+										className="mb-4 flex h-8 w-14 items-center justify-center rounded-lg border-[2px] border-yellow-400 bg-Black font-semibold text-yellow-400 transition-all duration-300 ease-out hover:scale-105 hover:bg-yellow-400 hover:text-Black xs:mb-6 xs:h-10 xs:w-20 sm:mb-8 dark:border-yellow-500 dark:text-yellow-500 dark:hover:bg-yellow-500 text-xs xs:text-base"
 									>
 										Repo
 									</a>
