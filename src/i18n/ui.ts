@@ -26,7 +26,8 @@ export const ui = {
 		'projects.yard':
 			'Yard Sale es un sitio web en el que puedes mostrarle a un cliente cómo se vería su sitio web en diferentes dispositivos. Este sitio web no tiene ninguna funcionalidad en sí, el objetivo aquí era aprender diseño responsivo y cómo trabajar con Mobile First. Este sitio web se creó con React JS, TailWindCSS, Astro, JavaScript, HTML y CSS.',
 		'projects.food':
-			'Platzi Food es una landing page donde podrás ver el menú del restaurante Platzi Food. Esta web no tiene ninguna funcionalidad en sí, lo que se buscaba aquí era aprender y especializarse en TailWind. Esta web fue creada con TailWindCSS, Astro, JavaScript, HTML y CSS.'
+			'Platzi Food es una landing page donde podrás ver el menú del restaurante Platzi Food. Esta web no tiene ninguna funcionalidad en sí, lo que se buscaba aquí era aprender y especializarse en TailWind. Esta web fue creada con TailWindCSS, Astro, JavaScript, HTML y CSS.',
+		'projects.live':'En vivo'
 	},
 	en: {
 		'nav.home': 'Home',
@@ -48,6 +49,7 @@ export const ui = {
 		'projects.yard':
 			'Yard Sale is a website where you can show a client how their website would look on different devices. This website does not have any functionality per se, the goal here was to learn responsive design and how to work with Mobile First. This website was made with React JS, TailWindCSS, Astro, JavaScript, HTML, and CSS.',
 		'projects.food':
-			'Platzi Food is a landing page where you can see the menu of the Platzi Food restaurant. This website does not have any functionality per se, what was sought here was to learn and specialize in TailWind. This website was created with TailWindCSS, Astro, JavaScript, HTML and CSS.'
+			'Platzi Food is a landing page where you can see the menu of the Platzi Food restaurant. This website does not have any functionality per se, what was sought here was to learn and specialize in TailWind. This website was created with TailWindCSS, Astro, JavaScript, HTML and CSS.',
+		'projects.live':'Live'
 	}
 } as const;
