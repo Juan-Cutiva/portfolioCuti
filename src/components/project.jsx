@@ -48,7 +48,7 @@ export default function project() {
 				{projects.map((item) => {
 					var one;
 					var two;
-					function as() {
+					function changeSize() {
 						if (window.innerWidth <= 1280) {
 							one = 'two';
 							two = 'one';
@@ -57,7 +57,7 @@ export default function project() {
 							two = item.pText;
 						}
 					}
-					as();
+					changeSize();
 
 					return (
 						<div id="parent" className="grid" key={item.id}>
