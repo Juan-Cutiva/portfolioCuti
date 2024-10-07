@@ -14,8 +14,8 @@ const projects = [
 		pImg: 'one',
 		pText: 'two',
 		description: t('projects.f1News'),
-		live: '',
-		repo: ''
+		live: 'https://f1newscuti.netlify.app/',
+		repo: 'https://github.com/Juan-Cutiva/CursoCSSGridPractico'
 	},
 	{
 		id: 2,
@@ -24,8 +24,8 @@ const projects = [
 		pImg: 'two',
 		pText: 'one',
 		description: t('projects.platziTravel'),
-		live: '',
-		repo: ''
+		live: 'https://cursotailwind2-3cuti.netlify.app/',
+		repo: 'https://github.com/Juan-Cutiva/cursoTailWind2-3'
 	},
 	{
 		id: 3,
@@ -34,8 +34,8 @@ const projects = [
 		pImg: 'one',
 		pText: 'two',
 		description: t('projects.yard'),
-		live: '',
-		repo: ''
+		live: 'https://yardsalecuti.netlify.app/',
+		repo: 'https://github.com/Juan-Cutiva/cursoFrontend'
 	},
 	{
 		id: 4,
@@ -44,8 +44,8 @@ const projects = [
 		pImg: 'two',
 		pText: 'one',
 		description: t('projects.food'),
-		live: '',
-		repo: ''
+		live: 'https://platzifoodcuti.netlify.app/',
+		repo: 'https://github.com/Juan-Cutiva/cursoTailWind1'
 	}
 ];
 

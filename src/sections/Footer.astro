@@ -1,15 +1,47 @@
 ---
 import LangButton from '../components/LangButton.astro';
+import InstagramFooter from '../icons/instagramFooter.astro';
+import XFooter from '../icons/xFooter.astro';
+import GitHubFooter from '../icons/githubFooter.astro';
+import LinkedinFooter from '../icons/linkedinFooter.astro';
 ---
 
 <footer
 	class="flex h-[4.5rem] w-screen items-center justify-center bg-White md:justify-around dark:bg-Black"
 >
 	<div id="socialMedia" class="flex gap-4">
-		<div class="size-11 scale-[.8] bg-yellow-700 xs:scale-100"></div>
-		<div class="size-11 scale-[.8] bg-yellow-700 xs:scale-100"></div>
-		<div class="size-11 scale-[.8] bg-yellow-700 xs:scale-100"></div>
-		<div class="size-11 scale-[.8] bg-yellow-700 xs:scale-100"></div>
+		<a
+			href="https://www.instagram.com/juan.cutiva_/"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="icons"
+		>
+			<InstagramFooter /></a
+		>
+		<a
+			href="https://x.com/JuanDavidCutiv2?mx=2"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="icons"
+		>
+			<XFooter />
+		</a>
+		<a
+			href="https://github.com/Juan-Cutiva"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="icons"
+		>
+			<GitHubFooter />
+		</a>
+		<a
+			href="https://www.linkedin.com/in/juan-david-cutiva-lopez-62ba62253/"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="icons"
+		>
+			<LinkedinFooter />
+		</a>
 	</div>
 	<div class="scale-[.8] xs:scale-100">
 		<LangButton />
@@ -22,5 +54,9 @@ import LangButton from '../components/LangButton.astro';
 		--tw-shadow-colored: inset 0 2px 4px 0 var(--tw-shadow-color);
 		box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000),
 			var(--tw-shadow);
+	}
+
+	.icons {
+		@apply size-11 scale-[.8] text-Black duration-300 hover:scale-90 hover:text-[#270f39] xs:scale-100 xs:hover:scale-110 dark:text-White dark:hover:text-[#c2c2c2];
 	}
 </style>
