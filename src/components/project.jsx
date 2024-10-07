@@ -10,7 +10,7 @@ const projects = [
 	{
 		id: 1,
 		name: 'F1 News',
-		img: 'https://i.postimg.cc/Njmf3rCg/f1.webp',
+		img: '/f1.webp',
 		pImg: 'one',
 		pText: 'two',
 		description: t('projects.f1News'),
@@ -20,7 +20,7 @@ const projects = [
 	{
 		id: 2,
 		name: 'Platzi Travel',
-		img: 'https://i.postimg.cc/rpTFMF75/travel.webp',
+		img: '/travel.webp',
 		pImg: 'two',
 		pText: 'one',
 		description: t('projects.platziTravel'),
@@ -30,7 +30,7 @@ const projects = [
 	{
 		id: 3,
 		name: 'Yard Sale',
-		img: 'https://i.postimg.cc/gJSYVyjK/yard.webp',
+		img: '/yard.webp',
 		pImg: 'one',
 		pText: 'two',
 		description: t('projects.yard'),
@@ -40,7 +40,7 @@ const projects = [
 	{
 		id: 4,
 		name: 'Platzi Food',
-		img: 'https://i.postimg.cc/Gpj32n1V/food.webp',
+		img: '/food.webp',
 		pImg: 'two',
 		pText: 'one',
 		description: t('projects.food'),
