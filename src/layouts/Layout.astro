@@ -7,17 +7,23 @@ interface Props {
 
 const { title } = Astro.props;
 
-import { getLangFromUrl } from '../i18n/utils';
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <!doctype html>
 <html lang={lang} class="">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="PortFolio Juan Cutiva Donde podrás conocer de mi." />
+		<meta name="description" content={t('layout.description')} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta
+			name="keywords"
+			content="PortFolio, portfolio, PortaFolio, portafolio, Juan Cutiva, juan cutiva, Juan David Cutiva Lopez, juan david cutiva lopez, Cutiva, cutiva."
+		/>
+		<meta property="og:image" content="/screenShot.webp" />
 		<meta name="robots" content="LayoutPage, follow" />
 		<title>{title}</title>
 	</head>

@@ -9,6 +9,7 @@ export const defaultLang = 'es';
 
 export const ui = {
 	es: {
+		'layout.description':'Portafolio Juan Cutiva Donde podrás conocer más de mi.',
 		'nav.home': 'Inicio',
 		'nav.projects': 'Proyectos',
 		'nav.contact': 'Contacto',
@@ -43,6 +44,7 @@ export const ui = {
 		'404.button':'Regresar a casa'
 	},
 	en: {
+		'layout.description':'Portfolio Juan Cutiva Where you can learn more about me.',
 		'nav.home': 'Home',
 		'nav.projects': 'Projects',
 		'nav.contact': 'Contact',
