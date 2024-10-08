@@ -75,7 +75,7 @@ export default function project() {
 						>
 							<div className="flex w-full flex-col items-end justify-end rounded-xl" id={one}>
 								<img src={item.img} alt="img" className="w-full rounded-lg" />
-								<div className="absolute flex h-10 w-[85vw] items-end justify-around gap-40 md:w-[70vw] xl:w-[34vw]">
+								<div className="absolute flex h-10 w-[75vw] items-end justify-around gap-40 md:w-[70vw] xl:w-[34vw] mx-auto">
 									<a href={item.live} target="_blank" rel="noopener noreferrer" className="button">
 										{t('projects.live')}
 									</a>
