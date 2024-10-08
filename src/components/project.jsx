@@ -68,36 +68,30 @@ export default function project() {
 					changeSize();
 
 					return (
-						<div id="parent" className="grid" key={item.id}>
+						<div
+							id="parent"
+							className="grid border-[3px] border-yellow-400 p-4 backdrop-blur-sm dark:border-yellow-500 rounded-2xl"
+							key={item.id}
+						>
 							<div className="flex w-full flex-col items-end justify-end rounded-xl" id={one}>
 								<img src={item.img} alt="img" className="w-full rounded-lg" />
-								<div className="absolute flex h-10 w-[85vw] items-end justify-around gap-20 md:w-[70vw] xl:w-[34vw]">
-									<a
-										href={item.live}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="mb-4 flex h-8 w-14 items-center justify-center rounded-lg border-[2px] border-yellow-400 bg-Black font-semibold text-yellow-400 transition-all duration-300 ease-out hover:scale-105 hover:bg-yellow-400 hover:text-Black xs:mb-6 xs:h-10 xs:w-20 sm:mb-8 dark:border-yellow-500 dark:text-yellow-500 dark:hover:bg-yellow-500 text-xs xs:text-base"
-									>
+								<div className="absolute flex h-10 w-[85vw] items-end justify-around gap-40 md:w-[70vw] xl:w-[34vw]">
+									<a href={item.live} target="_blank" rel="noopener noreferrer" className="button">
 										{t('projects.live')}
 									</a>
-									<a
-										href={item.repo}
-										target="_blank"
-										rel="noopener noreferrer"
-										className="mb-4 flex h-8 w-14 items-center justify-center rounded-lg border-[2px] border-yellow-400 bg-Black font-semibold text-yellow-400 transition-all duration-300 ease-out hover:scale-105 hover:bg-yellow-400 hover:text-Black xs:mb-6 xs:h-10 xs:w-20 sm:mb-8 dark:border-yellow-500 dark:text-yellow-500 dark:hover:bg-yellow-500 text-xs xs:text-base"
-									>
+									<a href={item.repo} target="_blank" rel="noopener noreferrer" className="button">
 										Repo
 									</a>
 								</div>
 							</div>
 							<div
-								className="prose-md h-fit w-full rounded-lg bg-[#ffffff17] p-8 text-center font-medium backdrop-blur-md xl:h-[16.5rem]"
+								className="prose-md h-fit w-full rounded-lg bg-[#ffffff17] p-8 text-center font-medium backdrop-blur-md xl:min-h-[16.5rem]"
 								id={two}
 							>
 								<h2 className="mb-2 text-center text-4xl font-semibold text-yellow-400 dark:text-yellow-500">
 									{item.name}
 								</h2>
-								<p>{item.description}</p>
+								<p className="text-White">{item.description}</p>
 							</div>
 						</div>
 					);
