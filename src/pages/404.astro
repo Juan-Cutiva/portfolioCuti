@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../sections/Header.astro';
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<Layout title={`404 ${t('404.title')}`}>
+	<Header />
+
+	<div class="grid h-screen place-content-center bg-Black px-4">
+		<div class="text-center">
+			<h1 class="text-9xl font-black text-gray-100">404</h1>
+
+			<p class="text-2xl font-bold tracking-tight text-yellow-400 sm:text-4xl dark:text-yellow-500">
+				Uh-oh!
+			</p>
+
+			<p class="mt-4 text-gray-500">{t('404.text')}</p>
+
+			<a
+				href={getRelativeLocaleUrl(lang, '/')}
+				class="mt-6 inline-block rounded bg-yellow-500 px-5 py-3 text-sm font-medium text-Black hover:bg-[#521a7d] hover:text-yellow-500 hover:shadow-inner focus:outline-none focus:ring"
+			>
+				{t('404.button')}
+			</a>
+		</div>
+	</div>
+</Layout>

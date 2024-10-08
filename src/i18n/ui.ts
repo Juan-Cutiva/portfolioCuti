@@ -1,3 +1,5 @@
+import { age } from '../scripts/age';
+
 export const languages = {
 	es: 'Español',
 	en: 'English'
@@ -14,7 +16,9 @@ export const ui = {
 		'typed.text': 'Un desarrollador Front-End el cual quiere descubrir sus límites',
 		'about.title': 'Sobre Mí',
 		'about.text':
-			'Mi nombre es Juan soy un desarrollador Front-End apasionado por el mundo de la programación. Me gusta estar en constante aprendizaje y encontrar las mejores soluciones. Tengo experiencia en tecnologías como TailWindCSS, Astro, HTML, CSS, JavaScript, React JS, Git y GitHub',
+			'Mi nombre es Juan Cutiva, actualmente tengo ' +
+			age +
+			' años, estudio de manera autodidacta. Soy un desarrollador Front-End apasionado por el mundo de la programación. Me gusta estar en constante aprendizaje y encontrar las mejores soluciones. Tengo experiencia en tecnologías como TailWindCSS, Astro, HTML, CSS, JavaScript, React JS, Git y GitHub',
 		'about.contact': 'Contáctame',
 		'skills.title': 'Mis Habilidades',
 		'skills.and': 'Y',
@@ -33,7 +37,10 @@ export const ui = {
 		'contact.email': 'Correo',
 		'contact.affair': 'Asunto',
 		'contact.comment': 'Comentarios',
-		'contact.send': 'Enviar'
+		'contact.send': 'Enviar',
+		'404.title':'No encontrada',
+		'404.text': "No podemos encontrar esa página.",
+		'404.button':'Regresar a casa'
 	},
 	en: {
 		'nav.home': 'Home',
@@ -43,7 +50,9 @@ export const ui = {
 		'typed.text': 'A developer Front-End who wants to discover his limits',
 		'about.title': 'About Me',
 		'about.text':
-			'My name is Juan and I am a Front-End developer who is passionate about the world of programming. I like to be constantly learning and finding the best solutions. I have experience in technologies such as TailWindCSS, Astro, HTML, CSS, JavaScript, React JS, Git and GitHub',
+			'My name is Juan Cutiva, I am currently ' +
+			age +
+			' years old, I am studying self-taught. I am a Front-End developer passionate about the world of programming. I like to be constantly learning and finding the best solutions. I have experience in technologies such as TailWindCSS, Astro, HTML, CSS, JavaScript, React JS, Git and GitHub',
 		'about.contact': 'Contact Me',
 		'skills.title': 'My Skills',
 		'skills.and': 'And',
@@ -62,6 +71,9 @@ export const ui = {
 		'contact.email': 'E-Mail',
 		'contact.affair': 'Affair',
 		'contact.comment': 'Comment',
-		'contact.send': 'Send'
+		'contact.send': 'Send',
+		'404.title':'Not Found',
+		'404.text': "We can't find that page.",
+		'404.button':'Go Back Home'
 	}
 } as const;
