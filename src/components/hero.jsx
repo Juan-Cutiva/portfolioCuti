@@ -4,7 +4,6 @@ import '../css/heroTyped.css';
 import { useTranslations } from '../i18n/utils';
 
 export default function MyComponent(props) {
-	// Create reference to store the DOM element containing the animation
 	const lang = `${props.lang}`;
 	const t = useTranslations(lang);
 
@@ -19,7 +18,6 @@ export default function MyComponent(props) {
 		});
 
 		return () => {
-			// Destroy Typed instance during cleanup to stop animation
 			typed.destroy();
 		};
 	}, []);
